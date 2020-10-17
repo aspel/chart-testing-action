@@ -35,13 +35,13 @@ main() {
     run_ct_container
     trap cleanup EXIT
 
-    local changed
-    changed=$(docker_exec ct list-changed)
-    if [[ -z "$changed" ]]; then
-        echo 'No chart changes detected.'
-        echo "::set-output name=changed::false"
-        return
-    fi
+    #local changed
+    #changed=$(docker_exec ct list-changed)
+    #if [[ -z "$changed" ]]; then
+    #    echo 'No chart changes detected.'
+    #    echo "::set-output name=changed::false"
+    #    return
+    #fi
 
     # Convenience output for other actions to make use of ct config to check if
     # charts changed.
