@@ -36,7 +36,7 @@ main() {
     trap cleanup EXIT
 
     local changed
-    changed=$(docker_exec ct list-changed --since HEAD~~)
+    changed=$(docker_exec ct list-changed --since HEAD~)
     if [[ -z "$changed" ]]; then
         echo 'No chart changes detected.'
         echo "::set-output name=changed::false"
